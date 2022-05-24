@@ -6,7 +6,7 @@ namespace ConsoleApp1
 {
     class countduplicate
     {
-        static void Main(string []args)
+        static void Main1(string []args)
         {
             int[] a = new int[] { 1, 2, 2, 3, 3,4,4 };
 
