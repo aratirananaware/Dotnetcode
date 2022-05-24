@@ -6,7 +6,7 @@ namespace ConsoleApp1
 {
     class palindrome
     {
-        static void Main(string[] args)
+        static void Main5(string[] args)
         {
             Console.WriteLine("enter the string");
             string s = Console.ReadLine();
