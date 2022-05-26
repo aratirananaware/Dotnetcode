@@ -6,7 +6,7 @@ namespace ConsoleApp1
 {
     class transpose
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             int[,] a = new int[2, 2];
             int[,] b = new int[2, 2];
