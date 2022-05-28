@@ -79,7 +79,7 @@ namespace ConsoleApp1
     }
     class TestEmployee
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //List<Employee> emp = new List<Employee>();
             Organization emp = new Organization();
