@@ -10,7 +10,7 @@ namespace ConsoleApp1
         {
             Console.WriteLine("i am a static Constructor");
         }
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             staticConstructor s = new staticConstructor();
 
