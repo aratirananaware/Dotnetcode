@@ -26,7 +26,7 @@ namespace ConsoleApp1
             Console.WriteLine("dog is eating");
         }
 
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             Console.WriteLine("enter the dog name");
             string name = Console.ReadLine();
