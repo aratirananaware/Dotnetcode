@@ -70,3 +70,15 @@ End
 
 select * from students
 select dbo.GetFullName(2) ;
+
+
+select * from employee
+create proc AddEmployee(@Id int,@Name varchar(200),@DepartmentId int)
+As 
+Begin
+
+insert into employee values(@Id,@Name,@DepartmentId);
+END
+
+
+exec dbo.AddEmployee 5,'xys',1

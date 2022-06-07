@@ -47,7 +47,7 @@ namespace ConsoleApp2
 			return min;
 		}
 
-		public static void Main()
+		public static void Main1()
 		{
 			IList<Player> p = new List<Player>();
 			p.Add(new Player { Name = "arati", Team = "b", Score = 20 });

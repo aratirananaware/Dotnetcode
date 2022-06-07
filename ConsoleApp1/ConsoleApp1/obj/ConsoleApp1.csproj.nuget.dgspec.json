@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Dot Net\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj": {}
+    "F:\\Dot Net\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj": {}
   },
   "projects": {
-    "E:\\Dot Net\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj": {
+    "F:\\Dot Net\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Dot Net\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectUniqueName": "F:\\Dot Net\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
         "projectName": "ConsoleApp1",
-        "projectPath": "E:\\Dot Net\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
-        "packagesPath": "C:\\Users\\pranita\\.nuget\\packages\\",
-        "outputPath": "E:\\Dot Net\\ConsoleApp1\\ConsoleApp1\\obj\\",
+        "projectPath": "F:\\Dot Net\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+        "packagesPath": "C:\\Users\\aksha\\.nuget\\packages\\",
+        "outputPath": "F:\\Dot Net\\ConsoleApp1\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pranita\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aksha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
