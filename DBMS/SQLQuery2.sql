@@ -17,3 +17,14 @@ insert into course values(2,'Electrical');
 
 select * from student;
 select * from course;
+
+create database customerdb1;
+use customerdb1;
+drop table customer;
+drop table supplier;
+
+create table customer(id int identity(1,1),CustomerCode nvarchar(50),CustomerName nvarchar(50),CustomerAmount int NOT NULL,primary key(id));
+create table supplier(id int identity(1,1),SupplierCode nvarchar(50),SupplierName nvarchar(50),SupplierAmount int NOT NULL,primary key(id));
+select * from customer;
+insert into customer values('234','gita',5800);
+select * from supplier;
