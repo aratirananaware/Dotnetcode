@@ -1,0 +1,14 @@
+create database EcommerceDB;
+use EcommerceDB;
+drop table TbILogin;
+create table TblLogin(Id int identity(1,1) primary key,UserName varchar(50)NOT NULL,Password varchar(50)NOT NULL,IsAdmin int);
+create table TblCategory(Id int identity(1,1) primary key,CatName varchar(100) NOT NULL);
+create table TblProduct(Id int identity(1,1) primary key,ProductName varchar(100),ProductDescription varchar(50),CatId int,ProductImage varchar(100),ProductMrp decimal(18,2),ProductDiscount decimal(18,2),ProductFinal decimal(18,2),ProductQuantity int);
+select * from TblCategory;
+select * from TblProduct;
+select * from TblLogin;
+insert into TblLogin values('admin','admin',1);
+insert into TblProduct values('mobile','one plus',NULL,'mobile.jfif',1000.00,10.00,100.00,20);
+insert into TblProduct values('jwellery','choker',NULL,'choker.jpg',2000.00,20.00,200.00,10);
+insert into TblProduct values('shirt','woman shirt',NULL,'shirt.webp',1000.00,20.00,200.00,10);
+insert into TblProduct values('handbag','handbag',NULL,'handbag.jpg',1000.00,20.00,200.00,10);
