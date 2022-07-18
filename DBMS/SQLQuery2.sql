@@ -62,3 +62,43 @@ insert into TblProduct values('shirt','woman shirt',NULL,'shirt.webp',1000.00,20
 insert into TblProduct values('handbag','handbag',NULL,'handbag.jpg',1000.00,20.00,200.00,10);
 
 delete from TblProduct where id=6;
+
+
+create database StockDB;
+use StockDB;
+create table company(companyCode int identity(1,1) primary key,companyName varchar(100),companyCeo varchar(100),companyTurnover int,companyWebsite varchar(100),stockExchange varchar(100));
+create table stockprice(stockprice decimal(18,2));
+select * from company;
+select * from stockprice;
+
+create database FoodProject;
+use FoodProject;
+create table RegisterTbl(UserID int identity(1,1) primary key,UserName varchar(100),Address varchar(100),PhoneNo int,Email varchar(100),Password varchar(100),IsAdmin int);
+create table FoodDetails(CatID int identity(100,1) primary key,FoodName varchar(100),FoodDescription varchar(100),FoodPrice int,FoodImage varchar(100));
+create table OrderTbl(OrderID int identity(1,1) primary key,UserName varchar(100),PaymentMode varchar(100),Address varchar(100),UserID int foreign key references RegisterTbl(UserID));
+create table Category(ID int identity(1,1) primary key,CatName varchar(100),CatID int foreign key references FoodDetails(CatID));
+
+select * from RegisterTbl;
+select * from FoodDetails;
+select * from OrderTbl;
+select * from Category;
+
+insert into FoodDetails values('Vada Pav','The dish consists of a deep fried potato dumpling placed inside a bread bun',10,'vadapav.jfif');
+insert into FoodDetails values('Pizza','vegan pizza',200,'pizza.webp');
+insert into FoodDetails values('Snacks','Healthy snacks',200,'snack.png');
+insert into FoodDetails values('Juice','Mango flavor',50,'juice.jpg');
+
+insert into OrderTbl values('arati','cash on delivery','pune',1);
+delete from OrderTbl where OrderID=1;
+
+create database fooddb;
+use fooddb;
+create table RegisterTbl(UserID int identity(1,1) primary key,UserName varchar(100),Address varchar(100),PhoneNo int,Email varchar(100),Password varchar(100),IsAdmin int,IsRestaurant int);
+create table FoodDetails(Id int identity(1,1) primary key,restaurantName varchar(100),foodName varchar(100),foodImage varchar(100),foodDescription varchar(100),place varchar(100),foodMrp decimal(18,2),foodDiscount decimal(18,2),foodFinal decimal(18,2),foodQuantity int);
+select * from RegisterTbl;
+select * from FoodDetails;
+alter table FoodDetails add IsActive int;
+
+insert into RegisterTbl values('arati','pune',77093,'arati@gmail.com','arati',1,1);
+insert into FoodDetails values('Vedant','Vada Pav','vadapav.jfif','fast food','pune',10.00,0,10.00,10,1);
+insert into FoodDetails values('Shri','Snacks','snack.png','Healthy snack','pune',200.00,10.00,180.00,20,0);
