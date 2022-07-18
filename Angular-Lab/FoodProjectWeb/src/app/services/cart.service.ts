@@ -9,6 +9,7 @@ export class CartService {
   public cartItemList : any =[]
   public productList = new BehaviorSubject<any>([]);
   public search = new BehaviorSubject<string>("");
+  
 
   constructor() { }
   getProducts(){
@@ -28,7 +29,7 @@ export class CartService {
   getTotalPrice() : number{
     let grandTotal = 0;
     this.cartItemList.map((a:any)=>{
-      grandTotal += a.foodPrice+a.quantity;
+      grandTotal += a.foodFinal;
     })
     return grandTotal;
   }
@@ -40,6 +41,7 @@ export class CartService {
     })
     this.productList.next(this.cartItemList);
   }
+  
   removeAllCart(){
     this.cartItemList = []
     this.productList.next(this.cartItemList);

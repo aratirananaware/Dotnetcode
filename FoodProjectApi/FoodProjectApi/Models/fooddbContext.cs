@@ -18,6 +18,7 @@ namespace FoodProjectApi.Models
         }
 
         public virtual DbSet<FoodDetail> FoodDetails { get; set; }
+        public virtual DbSet<OrderTbl> OrderTbls { get; set; }
         public virtual DbSet<RegisterTbl> RegisterTbls { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -73,6 +74,38 @@ namespace FoodProjectApi.Models
                     .HasMaxLength(100)
                     .IsUnicode(false)
                     .HasColumnName("restaurantName");
+            });
+
+            modelBuilder.Entity<OrderTbl>(entity =>
+            {
+                entity.ToTable("OrderTbl");
+
+                entity.Property(e => e.Address)
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Email)
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.FirstName)
+                    .HasMaxLength(100)
+                    .IsUnicode(false)
+                    .HasColumnName("firstName");
+
+                entity.Property(e => e.LastName)
+                    .HasMaxLength(100)
+                    .IsUnicode(false)
+                    .HasColumnName("lastName");
+
+                entity.Property(e => e.Paymentmode)
+                    .HasMaxLength(100)
+                    .IsUnicode(false)
+                    .HasColumnName("paymentmode");
+
+                entity.Property(e => e.PhoneNo)
+                    .HasMaxLength(10)
+                    .IsUnicode(false);
             });
 
             modelBuilder.Entity<RegisterTbl>(entity =>

@@ -13,6 +13,9 @@ import { AccountComponent } from './account/account.component';
 import {CartComponent} from './cart/cart.component';
 import { SearchComponent } from './search/search.component';
 import { FilterPipe } from './Shared/filter.pipe';
+import { AddfoodComponent } from './addfood/addfood.component';
+import { UpdateComponent } from './update/update.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +26,10 @@ import { FilterPipe } from './Shared/filter.pipe';
     AccountComponent,
     CartComponent,
     SearchComponent,
-    FilterPipe
+    AddfoodComponent,
+    FilterPipe,
+    UpdateComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

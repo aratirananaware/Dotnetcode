@@ -8,6 +8,9 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import {CartComponent} from './cart/cart.component';
 import { SearchComponent } from './search/search.component';
+import { AddfoodComponent } from './addfood/addfood.component';
+import { UpdateComponent } from './update/update.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 const routes: Routes = [
   {
     path: 'home',
@@ -40,6 +43,18 @@ const routes: Routes = [
   {
     path: 'search',
     component: SearchComponent
+  },
+  {
+    path: 'addfood',
+    component: AddfoodComponent
+  },
+  {
+    path: 'update',
+    component: UpdateComponent
+  },
+  {
+    path: 'checkout',
+    component: CheckoutComponent
   },
 ];
 @NgModule({

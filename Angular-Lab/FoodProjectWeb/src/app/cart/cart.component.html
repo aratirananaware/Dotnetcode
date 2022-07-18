@@ -10,6 +10,7 @@
                             <th>Food Image</th>
                             <th>Description</th>
                             <th>Price</th>
+                            <th>Discount</th>
                             <th>Quantity</th>
                             <th>Total</th>
                             <th>Action</th>
@@ -21,9 +22,20 @@
                             <td>{{item.foodName}}</td>
                             <td><img style="width: 120px;" src="../../assets/{{item.foodImage}}" alt=""></td>
                             <td style="width: 25%;">{{item.foodDescription}}</td>
-                            <th style="width: 12%;">{{item.foodPrice}}</th>
-                            <td style="width: 12%;"><input type="number" id="Quantity" name="Quantity" ng-model="quantity" min="1" max="100" placeholder="1"></td>
-                            <td style="width: 12%;">{{item.foodPrice}}</td>
+                            <th style="width: 12%;">{{item.foodMrp}}</th>
+                            <th style="width: 12%;">{{item.foodDiscount}}</th>
+                            <div>
+                                <select #quantitySelect
+                                [value]="item.foodQuantity"
+                               >
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                              </select>
+                              </div>
+                            <td style="width: 12%;">{{item.foodFinal}}</td>
                             <td>
                                 <button (click)="removeItem(item)" class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</button>
                             </td>

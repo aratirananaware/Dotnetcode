@@ -1,4 +1,4 @@
-﻿/*
+﻿
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -13,8 +13,8 @@ namespace FoodProjectApi.Controllers
     [ApiController]
     public class OrderController : ControllerBase
     {
-        FoodProjectContext db;
-        public OrderController(FoodProjectContext _db)
+        fooddbContext db;
+        public OrderController(fooddbContext _db)
         {
             db = _db;
         }
@@ -30,6 +30,33 @@ namespace FoodProjectApi.Controllers
             db.SaveChanges();
             return "success";
         }
+
+        [HttpPut]
+        public string Put([FromBody] OrderTbl food)
+        {
+            var tblsampleObj = db.OrderTbls.Where(x => x.Id == food.Id);
+            if (tblsampleObj != null)
+            {
+                db.OrderTbls.Update(food);
+                db.SaveChanges();
+                return "Success";
+            }
+
+            return "Fail";
+        }
+
+        [HttpDelete]
+        public string Delete([FromBody] int Id)
+        {
+            var tblsampleObj = db.OrderTbls.Where(x => x.Id == Id).FirstOrDefault();
+            if (tblsampleObj != null)
+            {
+                db.OrderTbls.Remove(tblsampleObj);
+                db.SaveChanges();
+                return "Success";
+            }
+
+            return "Fail";
+        }
     }
 }
-*/

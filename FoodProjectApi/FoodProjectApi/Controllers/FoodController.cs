@@ -35,5 +35,18 @@ namespace FoodProjectApi.Controllers
             db.SaveChanges();
             return "success";
         }
+        [HttpPut]
+        public string Put([FromBody] FoodDetail food)
+        {
+            var tblsampleObj = db.FoodDetails.Where(x => x.Id == food.Id);
+            if (tblsampleObj != null)
+            {
+                db.FoodDetails.Update(food);
+                db.SaveChanges();
+                return "Success";
+            }
+
+            return "Fail";
+        }
     }
 }

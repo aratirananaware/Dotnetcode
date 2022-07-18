@@ -16,7 +16,14 @@ export class HomeComponent implements OnInit {
   products: Array<Food> = new Array<Food>();
   ngOnInit(): void {
 
-    this._productservice.getProducts().subscribe(res => this.products = res, err => console.log(err))
+    this._productservice.getProducts().subscribe(res => {this.products = res;
+      this.products.forEach((a :any) =>{
+        Object.assign(a,{quantity:1});
+      });
+    })
+    this._cartservice.search.subscribe((val:any)=>{
+      this.searchKey = val;
+    })
   }
   
     buy(item: any){
