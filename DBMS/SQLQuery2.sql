@@ -99,6 +99,12 @@ select * from RegisterTbl;
 select * from FoodDetails;
 alter table FoodDetails add IsActive int;
 
-insert into RegisterTbl values('arati','pune',77093,'arati@gmail.com','arati',1,1);
+insert into RegisterTbl values('arati','pune',77093,'arati@gmail.com','arati',1,0);
 insert into FoodDetails values('Vedant','Vada Pav','vadapav.jfif','fast food','pune',10.00,0,10.00,10,1);
 insert into FoodDetails values('Shri','Snacks','snack.png','Healthy snack','pune',200.00,10.00,180.00,20,0);
+delete from FoodDetails where Id=7;
+
+create table OrderTbl(Id int identity(100,1) primary key,firstName varchar(100),lastName varchar(100),Email varchar(100),PhoneNo varchar(10),paymentmode varchar(100),Address varchar(100));
+select * from OrderTbl;
+delete from OrderTbl where Id=100;
+delete from RegisterTbl where UserID=4;

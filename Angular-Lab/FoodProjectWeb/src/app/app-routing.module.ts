@@ -11,6 +11,8 @@ import { SearchComponent } from './search/search.component';
 import { AddfoodComponent } from './addfood/addfood.component';
 import { UpdateComponent } from './update/update.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { FinalorderComponent } from './finalorder/finalorder.component';
+import { AdashboardComponent } from './adashboard/adashboard.component';
 const routes: Routes = [
   {
     path: 'home',
@@ -56,6 +58,14 @@ const routes: Routes = [
     path: 'checkout',
     component: CheckoutComponent
   },
+  {
+    path:'finalorder',
+    component:FinalorderComponent
+  },
+  {
+    path: 'adashboard',
+    component: AdashboardComponent
+  }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

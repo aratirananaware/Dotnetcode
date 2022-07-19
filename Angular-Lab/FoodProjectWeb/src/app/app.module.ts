@@ -16,6 +16,8 @@ import { FilterPipe } from './Shared/filter.pipe';
 import { AddfoodComponent } from './addfood/addfood.component';
 import { UpdateComponent } from './update/update.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { FinalorderComponent } from './finalorder/finalorder.component';
+import { AdashboardComponent } from './adashboard/adashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,9 @@ import { CheckoutComponent } from './checkout/checkout.component';
     AddfoodComponent,
     FilterPipe,
     UpdateComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    FinalorderComponent,
+    AdashboardComponent
   ],
   imports: [
     BrowserModule,

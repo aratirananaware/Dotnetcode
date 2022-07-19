@@ -19,9 +19,11 @@ export class LoginComponent implements OnInit {
   LoginUser() {
     this._auth.loginUser(this.loginUserData).subscribe(res => {
       localStorage.setItem('token', res.token);
-      if (res.isAdmin)
+      if (res.isRestaurant)
         this._router.navigate(['/dashboard']);
-      else
+      else if(res.isAdmin)
+      this._router.navigate(['/adashboard']);
+      else 
         this._router.navigate(['/account']);
     }, err => console.log(err));
   }
