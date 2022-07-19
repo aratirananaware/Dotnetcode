@@ -100,6 +100,7 @@ select * from FoodDetails;
 alter table FoodDetails add IsActive int;
 
 insert into RegisterTbl values('arati','pune',77093,'arati@gmail.com','arati',1,0);
+insert into RegisterTbl values('Vedant','pune',67854,'vedant@gmail.com','Vedant',0,1);
 insert into FoodDetails values('Vedant','Vada Pav','vadapav.jfif','fast food','pune',10.00,0,10.00,10,1);
 insert into FoodDetails values('Shri','Snacks','snack.png','Healthy snack','pune',200.00,10.00,180.00,20,0);
 delete from FoodDetails where Id=7;

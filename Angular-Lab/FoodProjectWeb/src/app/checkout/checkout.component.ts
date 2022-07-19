@@ -28,10 +28,10 @@ export class CheckoutComponent implements OnInit {
       firstName: this.addfood.firstName,
       
       lastName:this.addfood.lastName,
-      Email: this.addfood.Email,
+      Email: this.addfood.email,
       
-      PhoneNo: this.addfood.PhoneNo,
-      Address: this.addfood.Address,
+      PhoneNo: this.addfood.phoneNo,
+      Address: this.addfood.address,
       paymentmode:this.addfood.paymentmode
     }
 

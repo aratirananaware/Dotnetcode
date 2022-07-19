@@ -10,8 +10,15 @@ import { CartService } from './services/cart.service';
 export class AppComponent {
   title = 'FoodProjectWeb';
   public searchTerm !: string;
+  public totalItem : number = 0;
   constructor(private _auth:AuthService,public cartservice:CartService){
 
+  }
+  ngOnInit(): void {
+    this.cartservice.getProducts()
+    .subscribe(res=>{
+      this.totalItem = res.length;
+    })
   }
   LoggedIn(input:boolean){
     if(input){

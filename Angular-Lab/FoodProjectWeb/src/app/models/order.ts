@@ -2,10 +2,10 @@ export class order{
     id:number=0;
     firstName:string='';
     lastName:string='';
-    PhoneNo:string='';
-    Email:string='';
+    phoneNo:string='';
+    email:string='';
     
-    Address:string=''
+    address:string=''
     paymentmode:string='';
    
 

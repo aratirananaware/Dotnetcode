@@ -18,6 +18,7 @@ import { UpdateComponent } from './update/update.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { FinalorderComponent } from './finalorder/finalorder.component';
 import { AdashboardComponent } from './adashboard/adashboard.component';
+import { OrderdetailsComponent } from './orderdetails/orderdetails.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,8 @@ import { AdashboardComponent } from './adashboard/adashboard.component';
     UpdateComponent,
     CheckoutComponent,
     FinalorderComponent,
-    AdashboardComponent
+    AdashboardComponent,
+    OrderdetailsComponent
   ],
   imports: [
     BrowserModule,
