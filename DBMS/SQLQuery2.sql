@@ -109,3 +109,8 @@ create table OrderTbl(Id int identity(100,1) primary key,firstName varchar(100),
 select * from OrderTbl;
 delete from OrderTbl where Id=100;
 delete from RegisterTbl where UserID=4;
+create table FoodDetailsAdmin(Id int identity(1,1) primary key,restaurantName varchar(100),foodName varchar(100),foodImage varchar(100),foodDescription varchar(100),place varchar(100),foodMrp decimal(18,2),foodDiscount decimal(18,2),foodFinal decimal(18,2),foodQuantity int);
+
+
+select * from FoodDetailsAdmin;
+delete from FoodDetailsAdmin where id=3;

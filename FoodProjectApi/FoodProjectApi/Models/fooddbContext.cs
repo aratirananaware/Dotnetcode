@@ -18,6 +18,7 @@ namespace FoodProjectApi.Models
         }
 
         public virtual DbSet<FoodDetail> FoodDetails { get; set; }
+        public virtual DbSet<FoodDetailsAdmin> FoodDetailsAdmins { get; set; }
         public virtual DbSet<OrderTbl> OrderTbls { get; set; }
         public virtual DbSet<RegisterTbl> RegisterTbls { get; set; }
 
@@ -36,6 +37,50 @@ namespace FoodProjectApi.Models
 
             modelBuilder.Entity<FoodDetail>(entity =>
             {
+                entity.Property(e => e.FoodDescription)
+                    .HasMaxLength(100)
+                    .IsUnicode(false)
+                    .HasColumnName("foodDescription");
+
+                entity.Property(e => e.FoodDiscount)
+                    .HasColumnType("decimal(18, 2)")
+                    .HasColumnName("foodDiscount");
+
+                entity.Property(e => e.FoodFinal)
+                    .HasColumnType("decimal(18, 2)")
+                    .HasColumnName("foodFinal");
+
+                entity.Property(e => e.FoodImage)
+                    .HasMaxLength(100)
+                    .IsUnicode(false)
+                    .HasColumnName("foodImage");
+
+                entity.Property(e => e.FoodMrp)
+                    .HasColumnType("decimal(18, 2)")
+                    .HasColumnName("foodMrp");
+
+                entity.Property(e => e.FoodName)
+                    .HasMaxLength(100)
+                    .IsUnicode(false)
+                    .HasColumnName("foodName");
+
+                entity.Property(e => e.FoodQuantity).HasColumnName("foodQuantity");
+
+                entity.Property(e => e.Place)
+                    .HasMaxLength(100)
+                    .IsUnicode(false)
+                    .HasColumnName("place");
+
+                entity.Property(e => e.RestaurantName)
+                    .HasMaxLength(100)
+                    .IsUnicode(false)
+                    .HasColumnName("restaurantName");
+            });
+
+            modelBuilder.Entity<FoodDetailsAdmin>(entity =>
+            {
+                entity.ToTable("FoodDetailsAdmin");
+
                 entity.Property(e => e.FoodDescription)
                     .HasMaxLength(100)
                     .IsUnicode(false)

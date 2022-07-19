@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
       else if(res.isAdmin)
       this._router.navigate(['/adashboard']);
       else 
-        this._router.navigate(['/account']);
+        this._router.navigate(['/cart']);
     }, err => console.log(err));
   }
 

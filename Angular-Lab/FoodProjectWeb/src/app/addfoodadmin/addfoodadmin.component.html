@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html>
 <style>
@@ -63,25 +62,25 @@
                         <input [(ngModel)]="addfood.foodFinal" type="text">
                     </td>
                 </tr>
-                <tr>
-                    <td>Is Active</td>
-                    <td>
-                        <input [(ngModel)]="addfood.IsActive" type="text">
-                    </td>
-                </tr>
+                
             
         
 
-                <input type="submit" (click)="AddFood()">
-                <input type="button" (click)="Show()" value="Show" />
+                
                 
             </table>
         </div>
+
+
+
+
+
         <div class="column">
 
             <table border="2">
                 
-                
+                <input type="button" (click)="Show()" value="Show" />
+                <input type="submit" (click)="AddFood()">
                 <tr style="background-color:grey">
                     <td style="padding: 10px;">Restaurant Name</td>
                     <td style="padding:10px;"> Food Name</td>
@@ -91,9 +90,7 @@
                     <td style="padding: 10px;"> Price</td>
                     <td style="padding: 10px;"> Discount</td>
                     <td style="padding: 10px;"> Final</td>
-                    <td style="padding: 10px;"> Is Active</td>
-                    <td style="padding: 10px;"> Approve</td>
-                    <td style="padding: 10px;"> Status</td>
+                    
 
                 </tr>
                 <tr *ngFor="let item of addfoods" style="background-color: lightgrey;">
@@ -105,13 +102,14 @@
                     <td>{{item.foodMrp}}</td>
                     <td>{{item.foodDiscount}}</td>
                     <td>{{item.foodFinal}}</td>
-                    <td>{{item.IsActive}}</td>
+                    <td><input  (click)="EditFood(item)" value="Approve"></td>
+                    
                 </tr>
             </table>
         </div>
     </div>
     <li class="nav-item">
-        <a class="nav-link"  routerLink="/dashboard">Go Back</a>
+        <a class="nav-link"  routerLink="/adashboard">Go Back</a>
       </li>
 </body>
 

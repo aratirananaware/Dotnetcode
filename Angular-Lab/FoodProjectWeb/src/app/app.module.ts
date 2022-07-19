@@ -19,6 +19,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { FinalorderComponent } from './finalorder/finalorder.component';
 import { AdashboardComponent } from './adashboard/adashboard.component';
 import { OrderdetailsComponent } from './orderdetails/orderdetails.component';
+import { AddfoodadminComponent } from './addfoodadmin/addfoodadmin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,8 @@ import { OrderdetailsComponent } from './orderdetails/orderdetails.component';
     CheckoutComponent,
     FinalorderComponent,
     AdashboardComponent,
-    OrderdetailsComponent
+    OrderdetailsComponent,
+    AddfoodadminComponent
   ],
   imports: [
     BrowserModule,

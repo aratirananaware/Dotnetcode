@@ -3,6 +3,7 @@ import { Food } from '../models/Food';
 import { Router } from '@angular/router';
 import { ProductService } from '../services/product.service';
 import { CartService } from '../services/cart.service';
+import { foodadmin } from '../models/foodadmin';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -13,7 +14,7 @@ export class HomeComponent implements OnInit {
   searchKey:string ="";
   constructor(private _productservice: ProductService,private _router:Router,private _cartservice:CartService) { }
  
-  products: Array<Food> = new Array<Food>();
+  products: Array<foodadmin> = new Array<foodadmin>();
   ngOnInit(): void {
 
     this._productservice.getProducts().subscribe(res => {this.products = res;
@@ -28,7 +29,7 @@ export class HomeComponent implements OnInit {
   
     buy(item: any){
       this._cartservice.addtoCart(item);
-    this._router.navigate(['/cart']);
+    this._router.navigate(['/login']);
   }
   
   
