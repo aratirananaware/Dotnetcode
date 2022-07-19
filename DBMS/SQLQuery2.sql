@@ -113,4 +113,4 @@ create table FoodDetailsAdmin(Id int identity(1,1) primary key,restaurantName va
 
 
 select * from FoodDetailsAdmin;
-delete from FoodDetailsAdmin where id=3;
+delete from FoodDetailsAdmin where id=5;

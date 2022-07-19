@@ -90,6 +90,7 @@
                     <td style="padding: 10px;"> Price</td>
                     <td style="padding: 10px;"> Discount</td>
                     <td style="padding: 10px;"> Final</td>
+                    <td style="padding: 10px;"> Quantity</td>
                     
 
                 </tr>
@@ -102,8 +103,9 @@
                     <td>{{item.foodMrp}}</td>
                     <td>{{item.foodDiscount}}</td>
                     <td>{{item.foodFinal}}</td>
-                    <td><input  (click)="EditFood(item)" value="Approve"></td>
-                    
+                    <td>{{item.foodQuantity}}</td>
+                    <td><input  type="button" (click)="EditFood(item)" value="Approve"></td>
+                    <input type="button" value="Delete" (click)="DeleteCustomer(item)" />
                 </tr>
             </table>
         </div>

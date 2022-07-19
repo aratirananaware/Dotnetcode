@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Food } from '../models/Food';
 import { ProductService } from '../services/product.service';
 import { Injectable } from '@angular/core';
+import { foodadmin } from '../models/foodadmin';
 
 @Component({
   selector: 'app-update',
@@ -32,6 +33,7 @@ export class AddfoodadminComponent implements OnInit {
       foodMrp: Number(this.addfood.foodMrp),
       foodDiscount: Number(this.addfood.foodDiscount),
       foodImage: this.addfood.foodImage,
+      foodQuantity: this.addfood.foodQuantity,
       
     }
 
@@ -47,6 +49,10 @@ export class AddfoodadminComponent implements OnInit {
   }
   PostError(res: any) {
     console.log(res);
+  }
+  DeleteCustomer(input: Food) {
+    var index=this.addfoods.indexOf(input);
+    this.addfoods.splice(index,1);
   }
 
   Show() {
