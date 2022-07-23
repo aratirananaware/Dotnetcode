@@ -1,5 +1,5 @@
 
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
 <style>
     table,
@@ -69,18 +69,19 @@
                 
                 
             </table>
-        </div>
+        </div>-->
 
 
 
 
-
+<html>
+    <body>
         <div class="column">
 
             <table border="2">
                 
                 <input type="button" (click)="Show()" value="Show" />
-                <input type="submit" (click)="AddFood()">
+                
                 <tr style="background-color:grey">
                     <td style="padding: 10px;">Restaurant Name</td>
                     <td style="padding:10px;"> Food Name</td>
@@ -91,7 +92,7 @@
                     <td style="padding: 10px;"> Discount</td>
                     <td style="padding: 10px;"> Final</td>
                     <td style="padding: 10px;"> Quantity</td>
-                    
+                    <td style="padding: 10px;"> Action</td>
 
                 </tr>
                 <tr *ngFor="let item of addfoods" style="background-color: lightgrey;">
@@ -104,12 +105,16 @@
                     <td>{{item.foodDiscount}}</td>
                     <td>{{item.foodFinal}}</td>
                     <td>{{item.foodQuantity}}</td>
-                    <td><input  type="button" (click)="EditFood(item)" value="Approve"></td>
-                    <input type="button" value="Delete" (click)="DeleteCustomer(item)" />
+                    <!--<td><input  type="button" (click)="EditFood(item)" value="Approve"></td>
+                    <input type="button" value="Delete" (click)="DeleteCustomer(item)" />-->
+                    <td>
+                        <input type="button" [hidden]="(item.IsActive==1)?true:false" value="Add"  (click)="AddFood(item)" value="Approve"/>
+                        <label [hidden]="(item.IsActive==1)?false:true" >Approved</label>
+                    </td>
                 </tr>
             </table>
         </div>
-    </div>
+    
     <li class="nav-item">
         <a class="nav-link"  routerLink="/adashboard">Go Back</a>
       </li>

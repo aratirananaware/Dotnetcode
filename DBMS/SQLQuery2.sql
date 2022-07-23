@@ -113,7 +113,8 @@ create table FoodDetailsAdmin(Id int identity(1,1) primary key,restaurantName va
 
 alter table OrderTbl add UserName varchar(100);
 select * from FoodDetailsAdmin;
-delete from FoodDetailsAdmin where id=5;
+delete from FoodDetailsAdmin where id=7;
 
 create table myorder(Id int identity(1,1) primary key,foodName varchar(100),foodFinal decimal(18,2),foodImage varchar(100));
 select * from myorder;
+alter table FoodDetailsAdmin add IsActive int;

@@ -19,7 +19,7 @@ export class AddfoodadminComponent implements OnInit {
   }
   addfood: Food = new Food();
   addfoods: Array<Food> = new Array<Food>();
-
+/*
   AddFood() {
     console.log(this.addfood)
 
@@ -39,9 +39,20 @@ export class AddfoodadminComponent implements OnInit {
 
     this.httpc.post("https://localhost:44366/api/Orderadmin", addo).subscribe(res => this.PostSuccess(res), res => this.PostError(res));
     this.addfood = new Food();
+*/
+AddFood(addfood:any) {
+  var addo={
+    id:addfood.id
+}
+this.httpc.post("https://localhost:44366/api/Orderadmin/ApproveProperty",addo).subscribe(res=>this.PostSuccess(res),res=>this.PostError(res));
 
+//Azure
 
-  }
+//this.httpc.post("https://zagade123.azurewebsites.net/api/Property",propertydto).subscribe(res=>this.PostSuccess(res),res=>this.PostError(res));
+  this.addfood = new Food();
+
+}
+  
 
   PostSuccess(res: any) {
     console.log(res);
