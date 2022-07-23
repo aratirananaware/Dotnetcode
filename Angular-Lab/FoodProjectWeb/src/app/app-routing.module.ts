@@ -15,6 +15,8 @@ import { FinalorderComponent } from './finalorder/finalorder.component';
 import { AdashboardComponent } from './adashboard/adashboard.component';
 import { OrderdetailsComponent } from './orderdetails/orderdetails.component';
 import { AddfoodadminComponent } from './addfoodadmin/addfoodadmin.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { MyorderComponent } from './myorder/myorder.component';
 const routes: Routes = [
   {
     path: 'home',
@@ -75,6 +77,16 @@ const routes: Routes = [
   {
     path: 'addfoodadmin',
     component: AddfoodadminComponent
+  },
+  {
+    path: 'user-details',
+    component:UserDetailsComponent
+
+  },
+  {
+    path: 'myorder',
+    component:MyorderComponent
+
   },
 
 ];

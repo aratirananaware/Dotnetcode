@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
   
     buy(item: any){
       this._cartservice.addtoCart(item);
-    this._router.navigate(['/login']);
+    this._router.navigate(['/cart']);
   }
   
   
