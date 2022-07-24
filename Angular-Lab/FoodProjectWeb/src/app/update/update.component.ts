@@ -13,12 +13,13 @@ import { Injectable } from '@angular/core';
 export class UpdateComponent implements OnInit {
 
   constructor(public httpc: HttpClient, private _foodservice: ProductService, private _router: Router) { }
-
+  files = [];
+  isEdit=false;
   ngOnInit(): void {
   }
   addfood: Food = new Food();
   addfoods: Array<Food> = new Array<Food>();
-
+img:any;
   AddFood() {
     console.log(this.addfood)
 
@@ -35,17 +36,34 @@ export class UpdateComponent implements OnInit {
       isActive: Number(this.addfood.isActive)
     }
 
-    this.httpc.put("https://localhost:44366/api/Food", addo).subscribe(res => this.PutSuccess(res), res => this.PutError(res));
-    //this.addfood = new Food();
+    if(this.isEdit)
+    {
+      this.httpc.put("https://localhost:44366/api/Food", Food).subscribe(res => this.PostSuccess(res), res => this.PostError(res));
+    }
+    else
+{
+    let filetoUpload=<File>this.files[0];
+    const formData=new FormData();
+    formData.append('file',filetoUpload,filetoUpload.name)
+    this.httpc.post("https://localhost:44366/api/Upload",formData).subscribe(res=>{console.log(res); this.img=res;addo.foodImage=this.img.imageUrl;this.AddFoodss(addo);},res=>console.log(res));
+}
 
-
+    this.addfood = new Food();
   }
+  AddFoodss(addo:any)
+  {
+    this.httpc.post("https://localhost:44366/api/Food", addo).subscribe(res => this.PostSuccess(res), res => this.PostError(res));
+  }
+  onFileChanged(event: any) {
+    this.files = event.target.files;
+  }
+  
 
-  PutSuccess(res: any) {
+  PostSuccess(res: any) {
     console.log(res);
 
   }
-  PutError(res: any) {
+  PostError(res: any) {
     console.log(res);
   }
 

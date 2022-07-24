@@ -4,7 +4,9 @@ import {NgForm,FormGroup,Validators,FormBuilder,FormControl} from '@angular/form
 export class UserData{
     UserID:number=0;
     userName:string='';
+    isRestaurant:number=0;
     password:string='';
+    
 
     formLoginGroup:FormGroup;
     constructor(){

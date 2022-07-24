@@ -48,6 +48,7 @@ namespace FoodProjectApi.Controllers
             login.PhoneNo = registerViewModel.PhoneNo;
             login.Email = registerViewModel.Email;
             login.Address = registerViewModel.Address;
+            
             var token = iJWTMangerRepository.Authenicate(login, true);
             if (token == null)
             {

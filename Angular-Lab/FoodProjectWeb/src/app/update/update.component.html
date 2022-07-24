@@ -1,4 +1,4 @@
-<p>addfood works!</p>
+
 
 <!DOCTYPE html>
 <html>
@@ -42,7 +42,7 @@
                 <tr>
                     <td> Image</td>
                     <td>
-                        <input [(ngModel)]="addfood.foodImage" type="text">
+                        <input type="file" (change)="onFileChanged($event)" [(ngModel)]="addfood.foodImage" />
                     </td>
                 </tr>
                 <tr>
@@ -98,7 +98,7 @@
                     <td>{{item.foodName}}</td>
                     <td>{{item.foodDescription}}</td>
                     <td>{{item.place}}</td>
-                    <td>{{item.foodImage}}</td>
+                    <td><img src="{{item.foodImage}}" height="10%" width="10%"/></td>
                     <td>{{item.foodMrp}}</td>
                     <td>{{item.foodDiscount}}</td>
                     <td>{{item.foodFinal}}</td>

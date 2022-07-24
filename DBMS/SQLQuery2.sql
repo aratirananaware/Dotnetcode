@@ -96,6 +96,7 @@ use fooddb;
 create table RegisterTbl(UserID int identity(1,1) primary key,UserName varchar(100),Address varchar(100),PhoneNo int,Email varchar(100),Password varchar(100),IsAdmin int,IsRestaurant int);
 create table FoodDetails(Id int identity(1,1) primary key,restaurantName varchar(100),foodName varchar(100),foodImage varchar(100),foodDescription varchar(100),place varchar(100),foodMrp decimal(18,2),foodDiscount decimal(18,2),foodFinal decimal(18,2),foodQuantity int);
 select * from RegisterTbl;
+delete from RegisterTbl where UserID=10;
 select * from FoodDetails;
 alter table FoodDetails add IsActive int;
 
@@ -113,8 +114,8 @@ create table FoodDetailsAdmin(Id int identity(1,1) primary key,restaurantName va
 
 alter table OrderTbl add UserName varchar(100);
 select * from FoodDetailsAdmin;
-delete from FoodDetailsAdmin where id=7;
-
+delete from FoodDetailsAdmin where id=15;
+delete from FoodDetails where id=10;
 create table myorder(Id int identity(1,1) primary key,foodName varchar(100),foodFinal decimal(18,2),foodImage varchar(100));
 select * from myorder;
 alter table FoodDetailsAdmin add IsActive int;
