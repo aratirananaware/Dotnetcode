@@ -7,6 +7,7 @@ export class order{
     
     address:string=''
     paymentmode:string='';
+    userName:string='';
    
 
 }

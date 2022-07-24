@@ -100,16 +100,18 @@
                     <td>{{item.foodName}}</td>
                     <td>{{item.foodDescription}}</td>
                     <td>{{item.place}}</td>
-                    <td>{{item.foodImage}}</td>
+                    <td><img src="{{item.foodImage}}" height="10%" width="10%"/></td>
                     <td>{{item.foodMrp}}</td>
                     <td>{{item.foodDiscount}}</td>
                     <td>{{item.foodFinal}}</td>
                     <td>{{item.foodQuantity}}</td>
                     <!--<td><input  type="button" (click)="EditFood(item)" value="Approve"></td>
                     <input type="button" value="Delete" (click)="DeleteCustomer(item)" />-->
+                    
                     <td>
-                        <input type="button" [hidden]="(item.IsActive==1)?true:false" value="Add"  (click)="AddFood(item)" value="Approve"/>
-                        <label [hidden]="(item.IsActive==1)?false:true" >Approved</label>
+                        
+                        <input type="button" [hidden]="(item.isActive==1)?true:false" value="Add"  (click)="AddFood(item)" value="Approve"/>
+                        <label [hidden]="(item.isActive==1)?false:true" >Approved</label>
                     </td>
                 </tr>
             </table>

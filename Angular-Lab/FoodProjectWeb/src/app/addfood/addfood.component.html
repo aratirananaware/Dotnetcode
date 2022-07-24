@@ -42,7 +42,7 @@
                 <tr>
                     <td> Image</td>
                     <td>
-                        <input [(ngModel)]="addfood.foodImage" type="text">
+                        <input type="file" (change)="onFileChanged($event)" [(ngModel)]="addfood.foodImage" />
                     </td>
                 </tr>
                 <tr>
@@ -66,7 +66,7 @@
                 <tr>
                     <td>Is Active</td>
                     <td>
-                        <input [(ngModel)]="addfood.IsActive" type="text">
+                        <input [(ngModel)]="addfood.isActive" type="text">
                     </td>
                 </tr>
             
@@ -92,8 +92,7 @@
                     <td style="padding: 10px;"> Discount</td>
                     <td style="padding: 10px;"> Final</td>
                     <td style="padding: 10px;"> Is Active</td>
-                    <td style="padding: 10px;"> Approve</td>
-                    <td style="padding: 10px;"> Status</td>
+                    
 
                 </tr>
                 <tr *ngFor="let item of addfoods" style="background-color: lightgrey;">
@@ -101,11 +100,11 @@
                     <td>{{item.foodName}}</td>
                     <td>{{item.foodDescription}}</td>
                     <td>{{item.place}}</td>
-                    <td>{{item.foodImage}}</td>
+                    <td><img src="{{item.foodImage}}" height="10%" width="10%"/></td>
                     <td>{{item.foodMrp}}</td>
                     <td>{{item.foodDiscount}}</td>
                     <td>{{item.foodFinal}}</td>
-                    <td>{{item.IsActive}}</td>
+                    <td>{{item.isActive}}</td>
                 </tr>
             </table>
         </div>

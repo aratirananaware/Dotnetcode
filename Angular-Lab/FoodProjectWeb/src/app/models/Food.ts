@@ -9,6 +9,6 @@ export class Food{
     foodDescription:string=''
     foodImage:string='';
     foodFinal:number=0;
-    IsActive:number=0;
+    isActive:number=0;
 
 }

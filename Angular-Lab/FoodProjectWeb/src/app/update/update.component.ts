@@ -32,7 +32,7 @@ export class UpdateComponent implements OnInit {
       foodMrp: Number(this.addfood.foodMrp),
       foodDiscount: Number(this.addfood.foodDiscount),
       foodImage: this.addfood.foodImage,
-      IsActive: Number(this.addfood.IsActive)
+      isActive: Number(this.addfood.isActive)
     }
 
     this.httpc.put("https://localhost:44366/api/Food", addo).subscribe(res => this.PutSuccess(res), res => this.PutError(res));

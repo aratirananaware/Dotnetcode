@@ -68,3 +68,11 @@ F:\Dot Net\FoodProjectApi\FoodProjectApi\obj\Debug\netcoreapp3.1\FoodProjectApi.
 F:\Dot Net\FoodProjectApi\FoodProjectApi\obj\Debug\netcoreapp3.1\FoodProjectApi.dll
 F:\Dot Net\FoodProjectApi\FoodProjectApi\obj\Debug\netcoreapp3.1\FoodProjectApi.pdb
 F:\Dot Net\FoodProjectApi\FoodProjectApi\obj\Debug\netcoreapp3.1\FoodProjectApi.genruntimeconfig.cache
+F:\Dot Net\FoodProjectApi\FoodProjectApi\bin\Debug\netcoreapp3.1\Azure.Core.dll
+F:\Dot Net\FoodProjectApi\FoodProjectApi\bin\Debug\netcoreapp3.1\Azure.Storage.Blobs.dll
+F:\Dot Net\FoodProjectApi\FoodProjectApi\bin\Debug\netcoreapp3.1\Azure.Storage.Common.dll
+F:\Dot Net\FoodProjectApi\FoodProjectApi\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+F:\Dot Net\FoodProjectApi\FoodProjectApi\bin\Debug\netcoreapp3.1\System.IO.Hashing.dll
+F:\Dot Net\FoodProjectApi\FoodProjectApi\bin\Debug\netcoreapp3.1\System.Memory.Data.dll
+F:\Dot Net\FoodProjectApi\FoodProjectApi\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+F:\Dot Net\FoodProjectApi\FoodProjectApi\bin\Debug\netcoreapp3.1\System.Text.Json.dll

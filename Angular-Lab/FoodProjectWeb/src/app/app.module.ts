@@ -56,6 +56,7 @@ import { JwtHelperService,JWT_OPTIONS } from '@auth0/angular-jwt';
   ],
  
   providers: [AuthService,{provide:JWT_OPTIONS,useValue:JWT_OPTIONS},JwtHelperService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { UserData } from '../models/UserData';
-//import { finalorder } from '../models/finalorder';
+import { order } from '../models/order';
 import { AuthService } from '../services/auth.service';
 import { ProductService } from '../services/product.service';
 import { JwtHelperService } from '@auth0/angular-jwt';
@@ -16,6 +16,7 @@ export class MyorderComponent implements OnInit {
   myordersModels:any;
   username:string='';
   users:Array<UserData>=new Array<UserData>();
+  
   ngOnInit(): void {
     this.username=this.jwt.decodeToken(this._auth.getToken()?.toString())?.unique_name;
 

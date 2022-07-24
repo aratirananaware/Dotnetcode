@@ -25,12 +25,7 @@ namespace FoodProjectApi.Controllers
         [HttpPost]
         public string Post([FromBody] FoodDetail food)
         {
-            if (food.IsActive == 1)
-            {
-                db.SaveChanges();
-            }
-            else
-                return "not available";
+            
             db.FoodDetails.Add(food);
             db.SaveChanges();
             return "success";

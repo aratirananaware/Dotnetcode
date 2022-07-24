@@ -42,7 +42,8 @@ export class AddfoodadminComponent implements OnInit {
 */
 AddFood(addfood:any) {
   var addo={
-    id:addfood.id
+    id:addfood.id,
+    IsActive:addfood.IsActive
 }
 this.httpc.post("https://localhost:44366/api/Orderadmin/ApproveProperty",addo).subscribe(res=>this.PostSuccess(res),res=>this.PostError(res));
 
